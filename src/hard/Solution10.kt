@@ -1,7 +1,7 @@
 package hard
 
 class Solution10 {
-    var chars = Array<Char>(26, { i -> 'a' + i })
+
 
     fun isMatch(s: String, p: String): Boolean {
         if (p.isEmpty()) return s.isEmpty()
