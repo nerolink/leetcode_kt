@@ -84,10 +84,10 @@ class Solution04 {
         }
 
         while (true) {
-            if ((i > 0 || j == 0) && a[i - 1] > b[j]) {
+            if ((j < n) && (i > 0 || j == 0) && a[i - 1] > b[j]) {
                 i--
                 update_j()
-            } else if ((j > 0 || i == 0) && b[j - 1] > a[i]) {
+            } else if ((i < m) &&(j > 0 || i == 0) && b[j - 1] > a[i]) {
                 i++
                 update_j()
             } else {
@@ -103,5 +103,5 @@ class Solution04 {
 }
 
 fun main(args: Array<String>) {
-    print(Solution04().findMedianSortedArrays(intArrayOf(1,3), intArrayOf(2)))
+    print(Solution04().findMedianSortedArrays(intArrayOf(1, 3), intArrayOf(2)))
 }
